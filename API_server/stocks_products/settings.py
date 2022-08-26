@@ -26,7 +26,10 @@ SECRET_KEY = os.getenv('SECRET_KEY_1')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = [
+	'localhost',
+	'127.0.0.1',
+]
 
 
 # Application definition
@@ -89,7 +92,7 @@ DATABASES = {
         'NAME': 'netology_stocks_products',
         'USER': os.getenv('USER_DB'), 
         'PASSWORD': os.getenv('PASS_DB'), 
-        'HOST': '127.0.0.1',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
